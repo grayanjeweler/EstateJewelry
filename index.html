@@ -2,19 +2,341 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Gray & Sons Jewelers | Authenticated Luxury Watches with Box & Papers</title>
-    <meta name="description" content="Discover certified pre-owned luxury watches complete with original box and papers at Gray & Sons Jewelers. A trusted source for authenticated Swiss timepieces.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray & Sons Jewelers | Complete Provenance Luxury Watches</title>
+    <meta name="description" content="Gray & Sons Jewelers offers certified pre-owned luxury watches with original boxes & papers. Discover authenticated Rolex, Patek Philippe & Cartier timepieces with full documentation.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            background-color: #f8f5f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
+            color: #d4af37;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f5e8aa, #d4af37);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            animation: textGlow 3s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            animation: slideIn 1s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+        .section:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h2 {
+            color: #2a2a2a;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-left: 5px solid #d4af37;
+            padding-left: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .highlight-box {
+            background: #fff9e6;
+            border-left: 5px solid #d4af37;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .highlight-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 30px;
+            background: #f9f5eb;
+            border-radius: 10px;
+            margin-top: 40px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.2); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .cta-link {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.4s;
+            border: 2px solid #d4af37;
+            margin: 15px 0;
+        }
+
+        .cta-link:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 25px 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .feature:hover {
+            background: #fff;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #2a2a2a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.95rem;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+
+        .main-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px dotted #d4af37;
+        }
+
+        .main-link:hover {
+            border-bottom: 2px solid #d4af37;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .content { padding: 25px; }
+            .cta-link { padding: 15px 30px; font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h1>Authenticated Luxury Timepieces with Full Provenance</h1>
-        <p>For collectors and enthusiasts seeking assurance and completeness in their acquisitions, Gray & Sons Jewelers specializes in certified pre-owned Swiss watches accompanied by their original boxes and official papers. This practice provides a verified history and adds significant value to each timepiece, underscoring our commitment to transparency and authenticity in every transaction.</p>
-        
-        <p>Our role extends beyond retail to encompass a full service center, offering expert repairs, evaluations, and confidential asset purchasing. We operate with the understanding that trust is built on detail and verification. Decades of expertise inform our process, whether you are acquiring a watch, seeking service for a fine jewelry piece, or exploring options to sell a valuable asset.</p>
-        
-        <p>A key aspect of our curated collection focuses on this level of documented authenticity. We invite you to explore our dedicated selection of timepieces that include these important provenance items. You can view this specific collection of <a href="https://www.grayandsons.com/fine-watches/with-box-and-papers/" title="Luxury Watches with An Original Box and Papers">Luxury Watches with An Original Box and Papers</a> on our official website. As a trusted global resource, our aim is to provide clients with the information and verified quality needed for confident and informed decisions in luxury watch ownership.</p>
-        
-        <p>For more information on our full range of services and collections, please visit our main website: <a href="https://www.grayandsons.com" title="Gray & Sons Jewelers">Gray & Sons Jewelers</a>.</p>
-    </section>
+    <div class="container">
+        <header>
+            <h1>Complete Provenance in Luxury Watch Collecting</h1>
+            <p class="subtitle">Understanding the importance of original boxes, papers, and certified authentication in pre-owned Swiss timepieces</p>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2>The Significance of Documentation</h2>
+                <p>In the world of luxury watch collecting, provenance is not merely about ownership—it's about preserving a timeline of authenticity and value. Original boxes, warranty cards, service records, and manuals are more than accessories; they are tangible pieces of a timepiece's history. These elements collectively verify authenticity, provide service history, and significantly enhance both monetary and sentimental value for collectors and future generations.</p>
+                
+                <div class="highlight-box">
+                    <p>Gray & Sons Jewelers has built a global reputation over decades by specializing in certified pre-owned Swiss watches that include this complete documentation. Each timepiece in this category undergoes rigorous multi-point authentication by our expert watchmakers, ensuring every component matches the accompanying papers.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>A Curated Approach to Acquisition</h2>
+                <p>Our collection is assembled with a focus on watches that maintain their original documentation. This includes models from esteemed manufacturers such as Rolex, Patek Philippe, Audemars Piguet, and Cartier. We understand that for many enthusiasts, acquiring a watch with its original box and papers provides a sense of security and completeness that is essential for a meaningful addition to a collection.</p>
+                
+                <p>Beyond acquisition, our comprehensive service center offers expert repairs and maintenance performed by certified watchmakers, ensuring that even vintage pieces continue to operate with precision. This end-to-end service philosophy—from authenticated sales to professional aftercare—defines our commitment to the long-term relationship between owner and timepiece.</p>
+            </section>
+
+            <section class="section">
+                <h2>Features of Our Documented Collection</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Expert Authentication</h3>
+                        <p>Every watch undergoes a 20+ point inspection by certified watchmakers to verify authenticity against accompanying documentation.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📄</div>
+                        <h3>Complete Paperwork</h3>
+                        <p>Original warranty cards, user manuals, service records, and certificates of authenticity are verified and included.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📦</div>
+                        <h3>Original Packaging</h3>
+                        <p>Manufacturer boxes, inner cases, and protective materials are preserved and provided with each qualifying timepiece.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Warranty Protection</h3>
+                        <p>Our certified pre-owned watches come with a comprehensive warranty, backed by our in-house service center.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>An Informed Decision for Collectors</h2>
+                <p>We believe in empowering collectors with information and transparent verification processes. Whether you're considering an initial acquisition or adding to an established collection, understanding a watch's complete history is fundamental. Our specialists are available to provide detailed explanations of documentation, service histories, and authentication processes, ensuring you have the confidence that comes with verified provenance.</p>
+                
+                <p>This informational approach extends to our asset purchasing services as well. We provide detailed evaluations for those considering selling a watch with original documentation, explaining how each element contributes to the overall valuation in today's market.</p>
+            </section>
+
+            <div class="cta-section">
+                <h2>Explore the Documented Collection</h2>
+                <p>For collectors who value complete provenance, we invite you to explore our specifically curated selection of timepieces that come with their original boxes and full documentation. This collection represents watches that have maintained their historical integrity from manufacture to present day.</p>
+                
+                <a href="https://www.grayandsons.com/fine-watches/with-box-and-papers/" title="Luxury Watches with An Original Box and Papers" class="cta-link">
+                    View Luxury Watches with Box & Papers
+                </a>
+                
+                <p style="margin-top: 20px; font-style: italic;">A comprehensive resource for authenticated luxury timepieces.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>For more information on our complete range of services, including certified pre-owned watches, fine jewelry, expert repairs, and confidential asset purchasing, please visit our main website.</p>
+            <p style="margin-top: 15px;">
+                <a href="https://www.grayandsons.com" title="Gray & Sons Jewelers" class="main-link">Gray & Sons Jewelers</a> | Decades of Trust & Expertise
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #999;">
+                This informational resource is provided for educational purposes to assist collectors in making informed decisions about luxury timepieces.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Add scroll-triggered animation for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateX(0)";
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                section.style.opacity = "0";
+                section.style.transform = "translateX(-30px)";
+                section.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
